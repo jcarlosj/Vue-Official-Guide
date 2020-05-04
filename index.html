@@ -8,19 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Renderización Declarativa</h1>
+        <h1>Condicionales y Bucles</h1>
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            {{ message }}
+            <span v-if="seen">Ahora me ves</span>
         </div>
 
         <!-- Elemento de la segunda Instancia -->
         <div id="app-2">
-            <span v-bind:title="message">
-                Mueva el mouse sobre mí durante unos segundos
-                para ver mi título enlazado dinámicamente.
-            </span>
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
         </div>
 
     </div>

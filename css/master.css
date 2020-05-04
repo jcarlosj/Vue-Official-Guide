@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+ul, ol {
+    padding: 0 1em;
+}
+
 #app, #app-2 {
     background-color: #f8f8f8;
     padding: 1.2em 1.4em;
