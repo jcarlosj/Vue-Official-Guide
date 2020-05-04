@@ -8,18 +8,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>Manejando Interacciones del Usuario</h1>
+        <h1>Composición con Componentes</h1>
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <p>{{ message }}</p>
-            <button v-on:click="reverseMessage">Mensaje Invertido</button>
+            <ol>
+                <!-- Crea una instancia del componente todo-item -->
+                <todo-item></todo-item>
+            </ol>
         </div>
 
         <!-- Elemento de la segunda Instancia -->
         <div id="app-2">
-            <p>{{ message }}</p>
-            <input v-model="message">
+            <ol>
+                <grocery-item
+                    v-for="item in groceryList"
+                    v-bind:article="item"
+                    v-bind:key="item.id">
+                </grocery-item>
+            </ol>
         </div>
 
     </div>
