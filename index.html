@@ -8,25 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Composición con Componentes</h1>
+        <h1>Datos y Métodos</h1>
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <ol>
-                <!-- Crea una instancia del componente todo-item -->
-                <todo-item></todo-item>
-            </ol>
-        </div>
+            <p>{{ text }}</p>
+            <button v-on:click="text = 'Adiós!'">Cámbialo</button>
+          </div>
 
         <!-- Elemento de la segunda Instancia -->
         <div id="app-2">
-            <ol>
-                <grocery-item
-                    v-for="item in groceryList"
-                    v-bind:article="item"
-                    v-bind:key="item.id">
-                </grocery-item>
-            </ol>
+            <p>{{ text }}</p>
+            <!-- esto ya no actualizará `text`! -->
+            <button v-on:click="text = 'Adiós!'">Cámbialo</button>
         </div>
 
     </div>

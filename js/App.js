@@ -1,27 +1,22 @@
-/** Composición con Componentes */
+/** Datos y Métodos */
 
-// Define un nuevo componente llamado todo-item
-Vue .component( 'todo-item', {
-    template: '<li>Esta es una tarea.</li>'
-});
+var data = {                    // Define un Objeto
+    text: 'Hola Vue.js!'
+}
 
 var app = new Vue({             // Instancia de Vue
-    el: '#app'                  // Elemento al que hace referencia la Instancia
+    el: '#app',                 // Elemento al que hace referencia la Instancia
+    data                        // Definición de propiedades
 });
 
-// Define un nuevo componente llamado grocery-item
-Vue .component( 'grocery-item', {
-    props: [ 'article' ],          // propiedad 'article' atributo personalizado (usado para hacer el bind en la vista)
-    template: '<li>{{ article.text }}</li>'
-});
+
+var data2 = {
+    text: 'Vue.js, te saluda!'
+}
+
+Object .freeze( data2 );        // Impide agregar/eliminar propiedades, su capacidad de numeracion, configuracion o escritura 
 
 var app2 = new Vue({
     el: '#app-2',
-    data: {
-        groceryList: [
-            { id: 0, text: 'Vegetales' },
-            { id: 1, text: 'Queso' },
-            { id: 2, text: 'Cualquier otra cosa que se supone que los humanos coman' }
-        ]
-    }
+    data: data2
 });
