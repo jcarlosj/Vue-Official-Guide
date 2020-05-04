@@ -1,22 +1,50 @@
-/** Datos y Métodos */
-
-var data = {                    // Define un Objeto
-    text: 'Hola Vue.js!'
-}
+/** Hooks del Ciclo de vida de la Instancia */
 
 var app = new Vue({             // Instancia de Vue
     el: '#app',                 // Elemento al que hace referencia la Instancia
-    data                        // Definición de propiedades
-});
-
-
-var data2 = {
-    text: 'Vue.js, te saluda!'
-}
-
-Object .freeze( data2 );        // Impide agregar/eliminar propiedades, su capacidad de numeracion, configuracion o escritura 
-
-var app2 = new Vue({
-    el: '#app-2',
-    data: data2
+    data: {                     // Definición de propiedades
+        message: 'Mira lo que pasa en consola!'
+    },
+    /** Hooks del Ciclo de vida de la Instancia */
+    beforeCreate: function () {
+        // `this` hace referencia a la instancia vm
+        console .group( 'beforeCreate!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    },
+    created: function () {
+        console .group( 'created!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    },
+    beforeMount: function () {
+        console .group( 'beforeMount!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    },
+    mounted: function () {
+        console .group( 'mounted!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    },
+    beforeUpdate: function () {
+        console .group( 'beforeUpdate!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    },
+    updated: function () {
+        console .group( 'updated!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    },
+    beforeDestroy: function () {
+        console .group( 'beforeDestroy!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    },
+    destroyed: function () {
+        console .group( 'destroyed!' );
+        console.log( `mensaje: ${ this .message }` );
+        console .groupEnd();
+    }
 });

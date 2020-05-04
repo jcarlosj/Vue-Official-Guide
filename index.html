@@ -8,19 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Datos y Métodos</h1>
+        <h1>Hooks del Ciclo de vida de la Instancia</h1>
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <p>{{ text }}</p>
-            <button v-on:click="text = 'Adiós!'">Cámbialo</button>
-          </div>
-
-        <!-- Elemento de la segunda Instancia -->
-        <div id="app-2">
-            <p>{{ text }}</p>
-            <!-- esto ya no actualizará `text`! -->
-            <button v-on:click="text = 'Adiós!'">Cámbialo</button>
+            <p>{{ message }}</p>
         </div>
 
     </div>
