@@ -8,20 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Condicionales y Bucles</h1>
+        <h1>Manejando Interacciones del Usuario</h1>
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <span v-if="seen">Ahora me ves</span>
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Mensaje Invertido</button>
         </div>
 
         <!-- Elemento de la segunda Instancia -->
         <div id="app-2">
-            <ol>
-                <li v-for="todo in todos">
-                    {{ todo.text }}
-                </li>
-            </ol>
+            <p>{{ message }}</p>
+            <input v-model="message">
         </div>
 
     </div>

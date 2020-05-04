@@ -41,6 +41,10 @@ ul, ol {
     padding: 0 1em;
 }
 
+p {
+    padding: .5rem 0;
+}
+
 #app, #app-2 {
     background-color: #f8f8f8;
     padding: 1.2em 1.4em;

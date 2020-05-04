@@ -1,19 +1,20 @@
-/** Condicionales y Bucles */
+/** Manejando Interacciones del Usuario */
 
 var app = new Vue({             // Instancia de Vue
     el: '#app',                 // Elemento al que hace referencia la Instancia
     data: {                     // Definición de propiedades
-        seen: true
+        message: 'Hola Vue.js!'
+    },
+    methods: {                  // Definicion de Metodos 
+        reverseMessage: function () {
+            this .message = this .message .split('') .reverse() .join('')
+        }
     }
 });
 
 var app2 = new Vue({
     el: '#app-2',
     data: {
-        todos: [
-            { text: 'Aprender JavaScript' },
-            { text: 'Aprender Vue' },
-            { text: 'Construir algo increíble' }
-        ]
+        message: 'Hola Vue.js!'
     }
 });
