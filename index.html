@@ -13,7 +13,7 @@
         <!-- Elemento de la primera Instancia -->
         <div id="app">
             <p><b>Vue dice:</b> {{ message }}</p>
-            <p v-once><b>Vue dice:</b> {{ message }}</p>
+            <p><b>Vue dice:</b> <span v-html="message"></span></p>
         </div>
 
     </div>
