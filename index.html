@@ -12,11 +12,20 @@
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <p v-bind:id="dynamicId">Hola Vue.js!</p>
+            <p v-bind:id="applyStyle ? 'title' : '' ">Hola Vue.js!</p>
             <button 
-                v-bind:disabled="isButtonDisabled"
                 v-on:click="removeIdSelector"
-            >Quitale el estilo!</button>
+            >{{ ! applyStyle ? 'Ponle ' : 'Quitale el' }} estilo!</button>
+        </div>
+
+        <!-- Elemento de la segunda Instancia -->
+        <div id="app-2">
+            <p>{{ message .split('') .reverse() .join('') }}</p>
+        </div>
+
+        <!-- Elemento de la tercera Instancia -->
+        <div id="app-3">
+            <p v-bind:id="'list-' + message.length">{{ message .length - 2 }}</p>
         </div>
 
     </div>
