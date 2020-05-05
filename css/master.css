@@ -51,6 +51,12 @@ p {
     margin: .5rem 0;
 }
 
+#title {
+    font-size: 1.6rem;
+    color: orange;
+    text-shadow: 2px 2px gray;
+}
+
 .container {
     /* background-color: pink; */
     display: flex;

@@ -12,8 +12,11 @@
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <p><b>Vue dice:</b> {{ message }}</p>
-            <p><b>Vue dice:</b> <span v-html="message"></span></p>
+            <p v-bind:id="dynamicId">Hola Vue.js!</p>
+            <button 
+                v-bind:disabled="isButtonDisabled"
+                v-on:click="removeIdSelector"
+            >Quitale el estilo!</button>
         </div>
 
     </div>
