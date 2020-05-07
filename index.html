@@ -8,24 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Interpolaciones</h1>
+        <h1>Directivas</h1>
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <p v-bind:id="applyStyle ? 'title' : '' ">Hola Vue.js!</p>
-            <button 
-                v-on:click="removeIdSelector"
-            >{{ ! applyStyle ? 'Ponle ' : 'Quitale el' }} estilo!</button>
-        </div>
-
-        <!-- Elemento de la segunda Instancia -->
-        <div id="app-2">
-            <p>{{ message .split('') .reverse() .join('') }}</p>
-        </div>
-
-        <!-- Elemento de la tercera Instancia -->
-        <div id="app-3">
-            <p v-bind:id="'list-' + message.length">{{ message .length - 2 }}</p>
+            <p v-if="seen">Puedes ver esto gracias a la directiva v-if</p>
         </div>
 
     </div>
