@@ -45,6 +45,10 @@ p {
     padding: .5rem 0;
 }
 
+form {
+    padding: .8rem 0;
+}
+
 button, input {
     padding: .4rem .8rem;
 }

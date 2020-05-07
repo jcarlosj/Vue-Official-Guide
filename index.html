@@ -8,22 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Directivas</h1>
+        <h1>Propiedades Computadas</h1>
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <form v-on:submit="doSomething">
-                <input name="name" type="text" placeholder="Escribe tu nombre">
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-
-        <!-- Elemento de la primera Instancia -->
-        <div id="app-2">
             <form v-on:submit.prevent="doSomething">
                 <input name="name" type="text" placeholder="Escribe tu nombre">
                 <button type="submit">Enviar</button>
             </form>
+
+            <p><b>Original </b>{{ message }}</p>
+            <p><b>Computado </b>{{ reversedMessase }}</p>
         </div>
 
     </div>
