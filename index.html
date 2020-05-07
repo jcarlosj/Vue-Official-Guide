@@ -11,10 +11,20 @@
         <h1>Directivas</h1>
 
         <!-- Elemento de la primera Instancia -->
-        <ul id="app">
-            <li><a v-bind:href="url">Ir a Vue!</a></li>
-            <li><a v-on:click="doSomething">Dame click!</a></li>
-        </ul>
+        <div id="app">
+            <form v-on:submit="doSomething">
+                <input name="name" type="text" placeholder="Escribe tu nombre">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Elemento de la primera Instancia -->
+        <div id="app-2">
+            <form v-on:submit.prevent="doSomething">
+                <input name="name" type="text" placeholder="Escribe tu nombre">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
 
     </div>
 

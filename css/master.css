@@ -45,7 +45,7 @@ p {
     padding: .5rem 0;
 }
 
-button {
+button, input {
     padding: .4rem .8rem;
 }
 
