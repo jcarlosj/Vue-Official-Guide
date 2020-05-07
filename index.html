@@ -12,10 +12,7 @@
 
         <!-- Elemento de la primera Instancia -->
         <div id="app">
-            <form v-on:submit.prevent="doSomething">
-                <input name="name" type="text" placeholder="Escribe tu nombre">
-                <button type="submit">Enviar</button>
-            </form>
+            <input v-model="message" type="text" placeholder="Escribe tu nombre">
 
             <p><b>Original </b>{{ message }}</p>
             <p><b>Computado </b>{{ reversedMessase }}</p>
