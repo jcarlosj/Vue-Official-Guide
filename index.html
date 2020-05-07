@@ -11,11 +11,21 @@
         <h1>Propiedades Computadas</h1>
 
         <!-- Elemento de la primera Instancia -->
+        <code>computed</code>
         <div id="app">
-            <input v-model="message" type="text" placeholder="Escribe tu nombre">
+            <input type="text" v-model="firstName" placeholder="Escribe tus nombres">
+            <input type="text" v-model="lastName" placeholder="Escribe tus apellidos">
 
-            <p><b>Original </b>{{ message }}</p>
-            <p><b>Computado </b>{{ reversedMessase }}</p>
+            <p>{{ fullName }}</p>
+        </div>
+
+        <!-- Elemento de la segunda Instancia -->
+        <code>watched</code>
+        <div id="app-2">
+            <input type="text" v-model="firstName" placeholder="Escribe tus nombres">
+            <input type="text" v-model="lastName" placeholder="Escribe tus apellidos">
+
+            <p>{{ fullName }}</p>
         </div>
 
     </div>
