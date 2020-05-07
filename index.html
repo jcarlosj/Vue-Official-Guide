@@ -11,9 +11,10 @@
         <h1>Directivas</h1>
 
         <!-- Elemento de la primera Instancia -->
-        <div id="app">
-            <p v-if="seen">Puedes ver esto gracias a la directiva v-if</p>
-        </div>
+        <ul id="app">
+            <li><a v-bind:href="url">Ir a Vue!</a></li>
+            <li><a v-on:click="doSomething">Dame click!</a></li>
+        </ul>
 
     </div>
 
